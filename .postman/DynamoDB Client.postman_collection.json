@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "5b8cf36f-4faf-4ba1-9de2-5f9f4665060d",
+		"name": "DynamoDB Client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"plot\": \"Uai sô\",\n    \"rating\": 5,\n    \"year\": 2021,\n    \"title\": \"A volta dos que não foram\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"plot\": \"They never were, but they are coming back\",\n    \"rating\": 10,\n    \"year\": 2021,\n    \"title\": \"A volta dos que não foram\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/movies/2021/A%20volta%20dos%20que%20n%C3%A3o%20foram",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"2021",
+						"A%20volta%20dos%20que%20n%C3%A3o%20foram"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movies/2021/A%20volta%20dos%20que%20n%C3%A3o%20foram",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"2021",
+						"A%20volta%20dos%20que%20n%C3%A3o%20foram"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movies/2013/Rush",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"2013",
+						"Rush"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
