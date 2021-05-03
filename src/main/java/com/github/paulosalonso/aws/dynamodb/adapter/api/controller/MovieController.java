@@ -7,12 +7,14 @@ import com.github.paulosalonso.aws.dynamodb.domain.usecase.CreateMovieUseCase;
 import com.github.paulosalonso.aws.dynamodb.domain.usecase.DeleteMovieUseCase;
 import com.github.paulosalonso.aws.dynamodb.domain.usecase.ReadMovieUseCase;
 import com.github.paulosalonso.aws.dynamodb.domain.usecase.UpdateMovieUseCase;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@Api(tags = "Movies")
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/movies")
